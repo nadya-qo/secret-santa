@@ -15,7 +15,7 @@ body {
 .trees { position:absolute; bottom:100px; left:0; width:100%; display:flex; justify-content:space-around; opacity:0.25; }
 .tree { width:0; height:0; border-left:40px solid transparent; border-right:40px solid transparent; border-bottom:80px solid #1f7a4f; }
 
-.santa { position:absolute; bottom:40px; right:40px; font-size: 11vw; filter:drop-shadow(0 10px 20px rgba(0,0,0,.4)); }
+.santa {position:absolute; bottom:40px; right:40px; font-size: 11vw; filter:drop-shadow(0 10px 20px rgba(0,0,0,.4));z-index: 1111;}
 
 /* CONTENT */
 .container { position: relative; z-index:20; height:100%; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px; }

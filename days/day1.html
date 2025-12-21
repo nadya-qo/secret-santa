@@ -95,7 +95,7 @@
 
               if (found === FULL_GIFTS) {
                 gameOver = true;
-                message.textContent = '🎁 УРА! СЛОВА ДНЯ: ДЛИТСЯ';
+                message.textContent = '🎁 УРА! СЛОВА ДНЯ: <strong>ДЛИТСЯ</strong>';
                 message.className = 'result win';
                 message.classList.remove('hidden');
               }
@@ -106,7 +106,7 @@
 
             if (tries === 0 && !gameOver) {
               gameOver = true;
-              message.textContent = '❌ Попытки закончились. Сегодня без слова.';
+              message.textContent = '❌ Попытки закончились. Попробуй ещё раз)';
               message.className = 'result lose';
               message.classList.remove('hidden');
             }
