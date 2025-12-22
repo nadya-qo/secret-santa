@@ -24,28 +24,33 @@
   <!-- CONTENT -->
   <div class="container">
     <div class="card">
-      <h1>День 1</h1>
+      <h1>День 2</h1>
 
-      <div class="game gifts-game">
-        <div class="gifts-grid" id="giftsGrid"></div>
-
-        <div class="subtitle">
-          Найди <b>3 непустых подарка</b> 🎁<br>
-          У тебя <span id="tries">6</span> попыток
-        </div>
-
-        <div id="gameMessage" class="result hidden"></div>
+      <div class="riddle">
+        <p class="riddle-text">
+          ЗАГАДКА:<br>
+          Она хранит подарки, но не знает получателей. Это?..
+        </p>
+        <input
+          type="text"
+          id="answerInput"
+          placeholder="Введите ответ"
+          class="riddle-input">
+        <button class="btn" id="checkBtn">Проверить</button>
+        <div class="result hidden" id="result"></div>
       </div>
 
       <a href="../index.html" class="btn">На главную</a>
     </div>
   </div>
 
+
   <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
-   <script>
-      new Snow ();
-   </script>
+  <script>
+    new Snow ();
+  </script>
   <script src="../scripts.js"></script>
-  <script src="../js_days/day1.js"></script>
+  <script src="../js_days/day2.js"></script>
+
 </body>
 </html>
