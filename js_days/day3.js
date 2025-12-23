@@ -1,4 +1,4 @@
-// --- День 3 ---
+// ===== День 3 =====
 const gameArea = document.getElementById('gameArea');
 const santa = document.getElementById('santa');
 const scoreEl = document.getElementById('score');
@@ -6,6 +6,11 @@ const secretWord = document.getElementById('secretWord');
 
 let score = 0;
 let gameFinished = false;
+
+const animals = ['🐰', '🦊', '🐻', '🐿️', '🦝', '🦉', '🦌'];
+
+const randomAnimal = animals[Math.floor(Math.random() * animals.length)];
+santa.textContent = randomAnimal;
 
 // двидения Санты
 function moveSanta(clientX) {
@@ -18,12 +23,12 @@ function moveSanta(clientX) {
   santa.style.left = x + 'px';
 }
 
-/* ===== Управление мышкой ===== */
+/* ===== управление мышкой ===== */
 gameArea.addEventListener('mousemove', (e) => {
   moveSanta(e.clientX);
 });
 
-/* ===== Управление пальцем ===== */
+/* ===== управление пальцем ===== */
 gameArea.addEventListener('touchmove', (e) => {
   e.preventDefault(); // важно!
   const touch = e.touches[0];
@@ -58,7 +63,7 @@ function createSnowflake() {
       flake.remove();
       clearInterval(checkCollision);
 
-      if (score >= 20) {
+      if (score >= 30) {
         finishGame();
       }
     }
@@ -77,5 +82,5 @@ function finishGame() {
   }
 }
 
-// старт
+// старт игры
 setInterval(createSnowflake, 800);

@@ -1,4 +1,4 @@
-// --- День 1 ---
+// ===== День 1 =====
 const grid = document.getElementById('giftsGrid');
 const triesEl = document.getElementById('tries');
 const message = document.getElementById('gameMessage');

@@ -1,4 +1,4 @@
-// --- День 2 ---
+// ===== День 2 =====
 const correctAnswer = 'ёлка';
 
 const input = document.getElementById('answerInput');
