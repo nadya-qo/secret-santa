@@ -1,68 +1,81 @@
-   // --- День 3 ---
-   const gameArea = document.getElementById('gameArea');
-   const santa = document.getElementById('santa');
-   const scoreEl = document.getElementById('score');
-   const secretWord = document.getElementById('secretWord');
+// --- День 3 ---
+const gameArea = document.getElementById('gameArea');
+const santa = document.getElementById('santa');
+const scoreEl = document.getElementById('score');
+const secretWord = document.getElementById('secretWord');
 
-   let score = 0;
-   let gameFinished = false;
+let score = 0;
+let gameFinished = false;
 
-   // движение Санты мышкой
-   gameArea.addEventListener('mousemove', e => {
-   const rect = gameArea.getBoundingClientRect();
-   let x = e.clientX - rect.left;
-   x = Math.max(20, Math.min(x, rect.width - 20));
-   santa.style.left = x + 'px';
-   });
+// двидения Санты
+function moveSanta(clientX) {
+  const rect = gameArea.getBoundingClientRect();
+  let x = clientX - rect.left;
 
-   // создание снежинки
-   function createSnowflake() {
-      const flake = document.createElement('div');
-      flake.classList.add('snowflake');
-      flake.textContent = '🎁';
+  // ограничения, чтобы не вылезал за края
+  x = Math.max(20, Math.min(x, rect.width - 20));
 
-      const left = Math.random() * 100;
-      const duration = Math.random() * 2 + 2;
+  santa.style.left = x + 'px';
+}
 
-      flake.style.left = left + '%';
-      flake.style.animationDuration = duration + 's';
+/* ===== Управление мышкой ===== */
+gameArea.addEventListener('mousemove', (e) => {
+  moveSanta(e.clientX);
+});
 
-      gameArea.appendChild(flake);
+/* ===== Управление пальцем ===== */
+gameArea.addEventListener('touchmove', (e) => {
+  e.preventDefault(); // важно!
+  const touch = e.touches[0];
+  moveSanta(touch.clientX);
+}, { passive: false });
 
-      // проверка столкновения
-      const checkCollision = setInterval(() => {
-         const flakeRect = flake.getBoundingClientRect();
-         const santaRect = santa.getBoundingClientRect();
+/* ===== падающие подарки ===== */
+function createSnowflake() {
+  const flake = document.createElement('div');
+  flake.classList.add('snowflake');
+  flake.textContent = '🎁';
 
-         if (
-            flakeRect.bottom >= santaRect.top &&
-            flakeRect.left < santaRect.right &&
-            flakeRect.right > santaRect.left
-         ) {
-            score++;
-            scoreEl.textContent = score;
-            flake.remove();
-            clearInterval(checkCollision);
+  const left = Math.random() * 100;
+  const duration = Math.random() * 2 + 2;
 
-            if (score >= 10) {
-            finishGame();
-            }
-         }
-      }, 50);
+  flake.style.left = left + '%';
+  flake.style.animationDuration = duration + 's';
 
-      // удаление, если упала
-      setTimeout(() => {
-         flake.remove();
-         clearInterval(checkCollision);
-      }, duration * 1000);
+  gameArea.appendChild(flake);
+
+  const checkCollision = setInterval(() => {
+    const flakeRect = flake.getBoundingClientRect();
+    const santaRect = santa.getBoundingClientRect();
+
+    if (
+      flakeRect.bottom >= santaRect.top &&
+      flakeRect.left < santaRect.right &&
+      flakeRect.right > santaRect.left
+    ) {
+      score++;
+      scoreEl.textContent = score;
+      flake.remove();
+      clearInterval(checkCollision);
+
+      if (score >= 20) {
+        finishGame();
       }
+    }
+  }, 50);
 
-   function finishGame() {
-   if (!gameFinished) {
-      gameFinished = true;
-      secretWord.classList.remove('hidden');
-   }
-   }
+  setTimeout(() => {
+    flake.remove();
+    clearInterval(checkCollision);
+  }, duration * 1000);
+}
 
-   // старт
-   setInterval(createSnowflake, 800);
+function finishGame() {
+  if (!gameFinished) {
+    gameFinished = true;
+    secretWord.classList.remove('hidden');
+  }
+}
+
+// старт
+setInterval(createSnowflake, 800);
