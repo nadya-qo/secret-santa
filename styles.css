@@ -82,6 +82,27 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   height: 32px;
   z-index: 3;
 }
+.creator {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-size: 18px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .4));
+  z-index: 1111;
+  cursor: pointer;
+  background: rgb(216 89 89 / 35%);
+  padding: 5px 13px;
+  border-radius: 10px;
+  border: 1px solid red;
+  color: #fff;
+  text-decoration: unset;
+  transition:transform .2s, box-shadow .2s;
+  box-shadow: 0 0px 4px rgba(255,59,59,.4);
+}
+.creator:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(255,59,59,.4);
+}
 /* --- GAME DAY 1 --- */
 .game {
   margin: 20px 0;
@@ -94,7 +115,6 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   overflow: hidden;
   margin-bottom: 15px;
 }
-/* Санта */
 .game-area .santa {
   position: absolute;
   bottom: 10px;
@@ -104,7 +124,6 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   cursor: pointer;
   width: 50px;
 }
-/* Снежинка */
 .game-area .snowflake {
   position: absolute;
   top: -30px;
@@ -116,13 +135,11 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   from { transform: translateY(-30px); }
   to   { transform: translateY(300px); }
 }
-/* Счёт */
 .score {
   font-size: 14px;
   opacity: 0.85;
   margin-bottom: 10px;
 }
-/* Секретное слово */
 .word {
   margin-top: 15px;
   padding: 12px;
@@ -219,4 +236,5 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   .days {align-items: center;justify-content: center;row-gap: 6px;}
   .btn-two {flex-direction: column;}
   .card {padding: 20px;}
+  .creator {font-size:15px;left:20px;}
 }
