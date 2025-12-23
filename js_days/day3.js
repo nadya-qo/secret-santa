@@ -41,7 +41,7 @@ function createSnowflake() {
   flake.classList.add('snowflake');
   flake.textContent = '🎁';
 
-  const left = Math.random() * 100;
+  const left = Math.random() * 90 + 5;
   const duration = Math.random() * 2 + 2;
 
   flake.style.left = left + '%';

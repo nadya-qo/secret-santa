@@ -229,6 +229,49 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
 .result.lose {
   background: rgba(255,0,0,0.25);
 }
+/* --- DAY 4 WORDS --- */
+.word-game {
+  margin: 20px 0;
+  text-align: center;
+}
+.progress {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.answer {
+  min-height: 40px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.letter {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .2s, background .2s;
+}
+.letter:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.3);
+}
+.letter.used {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 @media (max-width:600px) {
   .timer { font-size:32px; }
   .santa { font-size:64px; right:20px; }
