@@ -82,13 +82,6 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   height: 32px;
   z-index: 3;
 }
-@media (max-width:600px) {
-  .timer { font-size:32px; }
-  .santa { font-size:64px; right:20px; }
-  .day {width: 74px;}
-  .days {align-items: center;justify-content: center;row-gap: 6px;}
-  .btn-two {flex-direction: column;}
-}
 /* --- GAME DAY 1 --- */
 .game {
   margin: 20px 0;
@@ -109,6 +102,7 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   transform: translateX(-50%);
   font-size: 40px;
   cursor: pointer;
+  width: 50px;
 }
 /* Снежинка */
 .game-area .snowflake {
@@ -116,6 +110,7 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   top: -30px;
   font-size: 20px;
   animation: fallDown linear;
+  cursor: default;
 }
 @keyframes fallDown {
   from { transform: translateY(-30px); }
@@ -216,4 +211,12 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
 }
 .result.lose {
   background: rgba(255,0,0,0.25);
+}
+@media (max-width:600px) {
+  .timer { font-size:32px; }
+  .santa { font-size:64px; right:20px; }
+  .day {width: 74px;}
+  .days {align-items: center;justify-content: center;row-gap: 6px;}
+  .btn-two {flex-direction: column;}
+  .card {padding: 20px;}
 }

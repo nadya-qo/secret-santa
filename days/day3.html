@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тайный Санта</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="background">
+    <div class="trees">
+      <div class="tree"></div>
+      <div class="tree"></div>
+      <div class="tree"></div>
+      <div class="tree"></div>
+    </div>
+    <div class="snow"></div>
+    <div class="santa">🎅</div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <div class="card">
+      <h1>ДЕНЬ 3</h1>
+
+      <div class="game">
+      <div class="game-area" id="gameArea">
+         <div class="santa" id="santa">🎅</div>
+      </div>
+
+      <div class="score">
+         Поймано: <span id="score">0</span> / 10
+      </div>
+
+      <div class="word hidden" id="secretWord">
+         🎁 СЛОВО ДНЯ: <strong>ЭТОТ</strong>
+      </div>
+      </div>
+
+      <div class="subtitle">
+        Поймай 10 снежинок и тебе откроется одно слово!
+      </div>
+
+      <a href="../index.html" class="btn">На главную</a>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+   <script>
+      new Snow ();
+   </script>
+   <script src="../scripts.js"></script>
+   <script src="../js_days/day3.js"></script>
+</body>
+</html>
