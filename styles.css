@@ -278,6 +278,6 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   .day {width: 74px;}
   .days {align-items: center;justify-content: center;row-gap: 6px;}
   .btn-two {flex-direction: column;}
-  .card {padding: 20px;}
+  .card {padding: 20px;margin-top: -50px;}
   .creator {font-size:15px;left:20px;}
 }
