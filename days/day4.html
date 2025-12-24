@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тайный Санта</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="background">
+    <div class="trees">
+      <div class="tree"></div>
+      <div class="tree"></div>
+      <div class="tree"></div>
+      <div class="tree"></div>
+    </div>
+    <div class="snow"></div>
+    <div class="santa">🎅</div>
+    <a class="creator" href="https://t.me/+Y4YMZlIR_B5lOGQy" target="_blank">Автор: NAWEBA</a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <div class="card">
+      <h1>ДЕНЬ 4</h1>
+
+      <div class="word-game">
+         <div class="riddle-text">Собери пять слов, чтобы открыть слово дня!</div>
+         <div class="progress">
+            Собрано слов: <span id="count">0</span> / 5
+         </div>
+
+         <div class="answer" id="answer"></div>
+
+         <div class="letters" id="letters"></div>
+
+         <div class="result win hidden" id="win">
+            🎁 УРА! СЛОВО ДНЯ: НО
+         </div>
+      </div>
+
+      <a href="../index.html" class="btn">На главную</a>
+    </div>
+  </div>
+
+  <div class="meme-popup" id="memePopup">
+    <div class="meme-popup__overlay"></div>
+    <div class="meme-popup__content">
+      <button class="meme-popup__close">×</button>
+      <img src="../img/day4.webp" alt="Новогодний мем">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+   <script>
+      new Snow ();
+   </script>
+   <script src="../scripts.js"></script>
+   <script src="../js_days/day4.js"></script>
+</body>
+</html>
