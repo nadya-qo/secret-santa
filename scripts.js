@@ -71,21 +71,11 @@ function createCursorSnowflake(x, y) {
     snow.remove();
   }, 1200);
 }
-// для мышки
 document.addEventListener('mousemove', (e) => {
   const now = Date.now();
   if (now - lastSnowTime < SNOW_INTERVAL) return;
   lastSnowTime = now;
   createCursorSnowflake(e.clientX, e.clientY);
 });
-// для мобилки тач
-document.addEventListener('touchmove', (e) => {
-  const touch = e.touches[0];
-  if (!touch) return;
-  const now = Date.now();
-  if (now - lastSnowTime < SNOW_INTERVAL) return;
-  lastSnowTime = now;
-  createCursorSnowflake(touch.clientX, touch.clientY);
-}, { passive: true });
 
 console.log('scripts.js загружен');
