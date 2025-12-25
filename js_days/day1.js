@@ -10,7 +10,7 @@ if (grid) {
    let found = 0;
    let gameOver = false;
 
-   // создаём массив подарков
+   // создаём подарки
    const gifts = Array(TOTAL_GIFTS).fill('empty');
 
    // рандомно выбираем 3 непустых

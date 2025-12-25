@@ -23,19 +23,19 @@ function moveSanta(clientX) {
   santa.style.left = x + 'px';
 }
 
-/* ===== управление мышкой ===== */
+// управление мышкой
 gameArea.addEventListener('mousemove', (e) => {
   moveSanta(e.clientX);
 });
 
-/* ===== управление пальцем ===== */
+// управление на мобилках
 gameArea.addEventListener('touchmove', (e) => {
-  e.preventDefault(); // важно!
+  e.preventDefault();
   const touch = e.touches[0];
   moveSanta(touch.clientX);
 }, { passive: false });
 
-/* ===== падающие подарки ===== */
+// падающие подарки
 function createSnowflake() {
   const flake = document.createElement('div');
   flake.classList.add('snowflake');
