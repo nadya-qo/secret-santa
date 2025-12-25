@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тайный Санта</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="background">
+    <div class="trees">
+      <div class="tree"></div>
+      <div class="tree"></div>
+      <div class="tree"></div>
+      <div class="tree"></div>
+    </div>
+    <div class="snow"></div>
+    <div class="santa">🎅</div>
+    <a class="creator" href="https://t.me/+Y4YMZlIR_B5lOGQy" target="_blank">Автор: NAWEBA</a>
+  </div>
+
+<!-- DUCK LAYERS -->
+<div class="duck-layer back"></div>
+<div class="duck-layer mid"></div>
+<div class="duck-layer front"></div>
+
+<!-- INFO PANEL -->
+<div class="game-info">
+  <h1>ДЕНЬ 5</h1>
+  <p>Найди уточек на&nbsp;странице</p>
+  <div class="counter">
+    Найдено: <span id="found">0</span> / 15
+  </div>
+  <div class="win-duck" id="winMessage">
+    Слово дня МОМЕНТ
+  </div>
+</div>
+<div class="timer-box">
+  ⏱ Осталось: <span id="time">30</span> сек
+</div>
+
+<div class="end-popup" id="endPopup">
+  <div class="end-popup__content">
+    <h2>Время вышло</h2>
+    <p>Найдено <strong><span id="finalScore">0</span></strong> уточек 🐥</p>
+    <div class="btn-two">
+      <button class="btn" id="restartBtn">Начать сначала</button>
+      <a href="../index.html" class="btn btn-dark">На главную</a>
+    </div>
+  </div>
+</div>
+
+  <div class="meme-popup" id="memePopup">
+    <div class="meme-popup__overlay"></div>
+    <div class="meme-popup__content">
+      <button class="meme-popup__close">×</button>
+      <img src="../img/ng-duck.webp" alt="Новогодний мем">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+   <script>
+      new Snow ();
+   </script>
+   <script src="../scripts.js"></script>
+   <script src="../js_days/day5.js"></script>
+</body>
+</html>

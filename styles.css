@@ -62,12 +62,12 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   display: flex;
   justify-content: center;
   z-index: 2;
+  padding-inline: 10px;
 }
 .meme-popup__content img {
   display: block;
   max-width: 100%;
   max-height: 80vh;
-  border-radius: 12px;
 }
 .meme-popup__close {
   position: absolute;
@@ -291,6 +291,108 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   opacity: 0.3;
   pointer-events: none;
 }
+/* DAY 5 */
+.game-info {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 16px 26px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+.game-info h1 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.counter {
+  font-size: 16px;
+  margin-top: 6px;
+}
+.win-duck {
+  display: none;
+  font-weight: 600;
+  color: #7CFF7C;
+}
+.duck-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+.duck-layer.back { z-index: 5; }
+.duck-layer.mid { z-index: 15; }
+.duck-layer.front { z-index: 50; }
+.duck {
+  position: absolute;
+  font-size: 26px;
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 0.85;
+  filter: blur(0.4px);
+  transition: transform .2s, opacity .2s, filter .2s;
+}
+.duck:hover {
+  filter: none;
+  transform: scale(1.15);
+}
+.duck.found {
+  opacity: 0;
+  pointer-events: none;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+.duck.float {
+  animation: float 3s ease-in-out infinite;
+}
+.duck.noise {
+  opacity: 0.75;
+}
+.duck.noise:hover {
+  opacity: 1;
+}
+.timer-box {
+  position: fixed;
+  top: 139px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  background: rgba(236, 59, 59, 0.45);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+.end-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+.end-popup__content {
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,.5);
+}
+.end-popup h2 {
+  margin-bottom: 10px;
+}
+.end-popup p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
 
 @media (max-width:600px) {
   .timer { font-size:32px; }
@@ -300,4 +402,6 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   .btn-two {flex-direction: column;}
   .card {padding: 20px;margin-top: -50px;}
   .creator {font-size:15px;left:20px;}
+  .meme-popup__close { position: absolute; top: -10px; right: 4px;}
+  .game-info {width: 70%;}
 }
