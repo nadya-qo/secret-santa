@@ -12,8 +12,8 @@ const mediaQuery = window.matchMedia('(max-width: 600px)');
 function handleTabletChange(e) {
   if (e.matches) {
      widthO = 90;
-     TOTAL_DUCKS = 47;
-     TOTAL_NOISE = 146;
+     TOTAL_DUCKS = 62;
+     TOTAL_NOISE = 257;
   } else {
      widthO = 96;
      TOTAL_DUCKS = 74;
