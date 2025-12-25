@@ -108,7 +108,7 @@ function createNoise() {
 
     // плохие эмодзи - штраф
     if (BAD.includes(noise.textContent)) {
-      found = Math.max(0, found - 1);
+      found = Math.max(-26, found - 1);
       foundEl.textContent = found;
     }
 
