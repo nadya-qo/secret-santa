@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тайный Санта</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ФОН -->
+  <div class="background">
+    <div class="trees">
+      <div class="tree"></div>
+      <div class="tree"></div>
+      <div class="tree"></div>
+      <div class="tree"></div>
+    </div>
+    <div class="snow"></div>
+    <div class="santa">🎅</div>
+    <a class="creator" href="https://t.me/+Y4YMZlIR_B5lOGQy" target="_blank">Автор: NAWEBA</a>
+  </div>
+
+  <!-- КОНТЕНТ -->
+<!-- GAME WRAPPER -->
+<div class="game-wide">
+
+  <div class="game-head">
+    <h1>ДЕНЬ 6</h1>
+    <p class="subtitle">
+      Запули 🎁 в дымоходы. Потяни назад и отпусти
+    </p>
+    <div class="score">
+      Попаданий: <b><span id="score">0</span> / 10</b>
+    </div>
+  </div>
+
+  <div class="field" id="field">
+    <div class="slingshot" id="slingshot"></div>
+
+    <div class="chimney" style="right: 15%"></div>
+    <div class="chimney" style="right: 40%"></div>
+    <div class="chimney" style="right: 65%"></div>
+  </div>
+
+  <div class="result win hidden" id="winMessage">
+    🎉 Все подарки доставлены!
+  </div>
+
+  <a href="../index.html" class="btn">На главную</a>
+</div>
+
+
+  <div class="meme-popup" id="memePopup">
+    <div class="meme-popup__overlay"></div>
+    <div class="meme-popup__content">
+      <button class="meme-popup__close">×</button>
+      <img src="../img/day6.webp" alt="Новогодний мем">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+   <script>
+      new Snow ();
+   </script>
+   <script src="../scripts.js"></script>
+   <script src="../js_days/day6.js"></script>
+</body>
+</html>
