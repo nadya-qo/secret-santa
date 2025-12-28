@@ -23,34 +23,21 @@
   </div>
 
   <!-- КОНТЕНТ -->
-<!-- GAME WRAPPER -->
-<div class="game-wide">
+  <div class="container">
+    <div class="card">
+      <h1>ДЕНЬ 6</h1>
+      <div class="riddle-text">Найди похожие карточки, чтобы<br> открыть слово дня!</div>
+      <p class="game-title progress">Раунд <span id="round">1</span> / 3</p>
+      <div class="mahjong-grid" id="grid"></div>
+      <div class="result game-message" id="message"></div>
 
-  <div class="game-head">
-    <h1>ДЕНЬ 6</h1>
-    <p class="subtitle">
-      Запули 🎁 в дымоходы. Потяни назад и отпусти
-    </p>
-    <div class="score">
-      Попаданий: <b><span id="score">0</span> / 10</b>
+      <div class="btn-two">
+         <button class="btn" id="restartBtn">Начать сначала</button>
+         <a href="../index.html" class="btn btn-dark">На главную</a>
+      </div>
     </div>
+    
   </div>
-
-  <div class="field" id="field">
-    <div class="slingshot" id="slingshot"></div>
-
-    <div class="chimney" style="right: 15%"></div>
-    <div class="chimney" style="right: 40%"></div>
-    <div class="chimney" style="right: 65%"></div>
-  </div>
-
-  <div class="result win hidden" id="winMessage">
-    🎉 Все подарки доставлены!
-  </div>
-
-  <a href="../index.html" class="btn">На главную</a>
-</div>
-
 
   <div class="meme-popup" id="memePopup">
     <div class="meme-popup__overlay"></div>
