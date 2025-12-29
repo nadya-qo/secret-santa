@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тайный Санта</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- ФОН -->
+  <div class="background">
+    <div class="trees">
+      <div class="tree"></div>
+      <div class="tree"></div>
+      <div class="tree"></div>
+      <div class="tree"></div>
+    </div>
+    <div class="snow"></div>
+    <div class="santa">🎅</div>
+    <a class="creator" href="https://t.me/+Y4YMZlIR_B5lOGQy" target="_blank">Автор: NAWEBA</a>
+  </div>
+
+  <!-- КОНТЕНТ -->
+   <div class="game-info">
+      <h1>ДЕНЬ 7</h1>
+      <p>Наряди ёлочку!<br> Выбери украшения и размести их на ёлке!</p>
+      <div class="info">
+         <a href="../index.html" class="in-main btn-dark">на главную</a>
+         <div class="tree-timer" id="time">01:30</div>
+         <button class="btn in-main" id="restartBtn">сначала</button>
+      </div>
+      <div class="win-duck" id="finalMessage" style="display:none;">
+      Слово дня <b>СЧИТАЮТ</b>
+      </div>
+   </div>
+
+  <div class="container">
+    <div class="center-game7">
+      <div class="center-game7__snow"></div>
+      <div class="center-game7__snow2"></div>
+      <div class="center-game7__snow3"></div>
+      <div class="tree-game">
+         <div class="tree-area" id="treeArea"><div class="tree-trunk"></div></div>
+         <div class="decor-panel">
+            <div class="decor" data-icon="🎁">🎁</div>
+            <div class="decor" data-icon="⭐">⭐</div>
+            <div class="decor" data-icon="🔔">🔔</div>
+            <div class="decor" data-icon="🎀">🎀</div>
+            <div class="decor" data-icon="✨">✨</div>
+            <div class="decor" data-icon="🍬">🍬</div>
+            <div class="decor" data-icon="🟡">🟡</div>
+            <div class="decor" data-icon="🔴">🔴</div>
+            <div class="decor" data-icon="🟢">🟢</div>
+            <div class="decor" data-icon="⚪">⚪</div>
+            <div class="decor" data-icon="🔵">🔵</div>
+            <div class="decor" data-icon="🟣">🟣</div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="meme-popup" id="memePopup">
+    <div class="meme-popup__overlay"></div>
+    <div class="meme-popup__content">
+      <button class="meme-popup__close">×</button>
+      <img src="../img/day7.webp" alt="Новогодний мем">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+   <script>
+      new Snow ();
+   </script>
+   <script src="../scripts.js"></script>
+   <script src="../js_days/day7.js"></script>
+</body>
+</html>

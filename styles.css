@@ -21,7 +21,7 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
 .subtitle { font-size:16px; opacity:0.85; margin-bottom:30px; }
 .btn { display:inline-block; padding:14px 28px; border-radius:30px; background:#ff3b3b; color:#fff; text-decoration:none; font-weight:500; transition:transform .2s, box-shadow .2s; box-shadow:0 8px 20px rgba(255,59,59,.4); border: unset; font-size: 17px;cursor: pointer;}
 .btn:hover { transform: translateY(-2px); box-shadow:0 12px 28px rgba(255,59,59,.6);}
-.btn-dark{background: #ab2626;}
+.btn-dark,.in-main.btn-dark{background: #ab2626;}
 .fdc {flex-direction:column;}
 .days {max-width: 480px;width: 100%;display: flex;flex-wrap: wrap; margin-top: 16px;}
 .day {width: 13.2%;margin-right: 6px;background: rgba(0, 0, 0, .35);backdrop-filter: blur(6px);border-radius: 12px;padding-block: 13px;display: flex;flex-direction: column;color: #fff;text-decoration:unset;transition: transform .2s, box-shadow .2s;cursor: default;}
@@ -442,6 +442,161 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   margin-bottom: 10px;
   padding: 10px;
 }
+/* day 7 */
+.tree-area {
+  position: relative;
+  height: 520px;
+  width: 320px;
+  pointer-events: auto;
+}
+.tree-area::before {
+  content: '';
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  border-bottom: 300px solid #1f7a4f;
+}
+.tree-area::after {
+  content: '';
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  border-bottom: 220px solid #2e9f67;
+}
+.tree-trunk {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 70px;
+  background: #6b3e1e;
+  border-radius: 0 0 10px 10px;
+}
+.decor-panel {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  border-radius: 15px;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
+  padding: 8px;
+  max-width: 362px;
+}
+.decor {
+  font-size: 32px;
+  cursor: pointer;
+  transition: transform .2s;
+  user-select: none;
+}
+.decor:hover {
+  transform: scale(1.2);
+}
+.decor.active {
+  outline: 2px solid #ff3b3b;
+  border-radius: 8px;
+}
+.placed-decor {
+  position: absolute;
+  font-size: 28px;
+  pointer-events: none;
+  animation: fadeIn .3s ease;
+  z-index: 1;
+}
+.final-message {
+  display: none;
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(0,150,0,.25);
+  border-radius: 14px;
+  animation: fadeIn .4s ease;
+}
+.tree-timer {
+  font-size: 16px;
+}
+.tree-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 19px;
+}
+.center-game7 {
+  position: relative;
+}
+.center-game7__snow {
+  position: absolute;
+  bottom: -1.2%;
+  width: 362px;
+  height: 25%;
+  background-color: #f1f9fc;
+  border-radius: 83% 54% 0 0;
+  box-shadow: inset -10px 0 14px 0 #c8ebf8;
+  display: block;
+  font-family: FontAwesome;
+  transform: translateY(-6px);
+  transition: all .5s linear;
+}
+.center-game7__snow2 {
+  position: absolute;
+  bottom: -1.4%;
+  width: 198px;
+  height: 14%;
+  background-color: #f1f9fc;
+  border-radius: 91% 5% 0 0;
+  box-shadow: inset -10px 0 14px 0 #c8ebf8;
+  display: block;
+  font-family: FontAwesome;
+  transform: translateY(-6px);
+  transition: all .5s linear;
+  left: -92px;
+}
+.center-game7__snow3 {
+  position: absolute;
+  bottom: -1.4%;
+  width: 147px;
+  height: 9%;
+  background-color: #f1f9fc;
+  border-radius: 0% 91% 0 0;
+  box-shadow: inset -10px 0 14px 0 #c8ebf8;
+  display: block;
+  font-family: FontAwesome;
+  transform: translateY(-6px);
+  transition: all .5s linear;
+  right: -81px;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  align-items: center;
+}
+.in-main {
+  background: #ff3b3b;
+  color: #fff;
+  text-decoration: unset;
+  border-radius: 10px;
+  padding: 2px 10px;
+}
+@media (max-width: 600px) {
+  .tree-area {
+    height: 360px;
+  }
+}
+
 @media (max-width:600px) {
   .timer { font-size:32px; }
   .santa { font-size:64px; right:20px; }
