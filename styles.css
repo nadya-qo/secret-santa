@@ -591,12 +591,6 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   border-radius: 10px;
   padding: 2px 10px;
 }
-@media (max-width: 600px) {
-  .tree-area {
-    height: 360px;
-  }
-}
-
 @media (max-width:600px) {
   .timer { font-size:32px; }
   .santa { font-size:64px; right:20px; }
@@ -607,4 +601,13 @@ h1 { font-size:20px; font-weight:400; opacity:0.9; margin-bottom:20px; }
   .creator {font-size:15px;left:20px;}
   .meme-popup__close { position: absolute; top: -10px; right: 4px;}
   .game-info {width: 70%;}
+  .tree-area {height: 360px;}
+  .center-game7__snow2,.center-game7__snow3,.info-text-g7 {display: none;}
+  .game-info-g7 {width: 94%;}
+  .decor-panel {gap: 10px;}
+  .container-g7 {align-items: end;padding-bottom: 119px;}
+  .tree-area::after {bottom: 150px;}
+  .tree-area::before {border-bottom: 212px solid #1f7a4f;}
+  .tree-game {gap: unset;}
+  .center-game7__snow {height: 28%;}
 }
